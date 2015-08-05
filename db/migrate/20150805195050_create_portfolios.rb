@@ -4,6 +4,7 @@ class CreatePortfolios < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.date :created
+      t.attachment :image
 
       t.timestamps null: false
     end

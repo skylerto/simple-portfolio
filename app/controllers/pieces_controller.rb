@@ -10,6 +10,7 @@ class PiecesController < ApplicationController
 
   def new
     @piece = Piece.new
+    @portfolios = Portfolio.order("title ASC")
   end
 
   def create
@@ -24,7 +25,7 @@ class PiecesController < ApplicationController
 
   private
     def piece_params
-      params.require(:piece).permit(:title, :created, :description, :image)
+      params.require(:piece).permit(:title, :created, :description, :image, :portfolio_id)
     end
 
     def find_piece

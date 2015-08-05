@@ -1,0 +1,45 @@
+<div id="page_wrapper">
+
+
+
+<div class="portfolio">
+  <div class="portfolio_image">
+    <%= image_tag(@portfolio.image.url(:medium)) %>
+  </div>
+
+  <h1 class="portfolio_title"><%= @portfolio.title %></h1>
+  <div class="portfolio_created">
+    <%= @portfolio.created.strftime("%B %d, %Y") %>
+  </div>
+
+  <div class="portfolio_description">
+    <%= @portfolio.description %>
+  </div>
+
+  <% @pieces.each do |piece| %>
+  <div class="piecelet">
+    <div class="piece_image">
+      <%= image_tag(piece.image.url(:thumb)) if piece.image? %>
+    </div>
+
+    <h2 class="piece_title"><%= link_to piece.title, piece %></h2>
+    <div class="piece_created">
+      <%= piece.created.strftime("%B %d, %Y") %>
+    </div>
+
+    <div class="piecelet_description">
+      <%= piece.description %>
+    </div>
+
+  </div>
+  <% end %>
+  <div class="clearfix">
+
+  </div>
+
+  <div class="button">
+  <%= link_to "back", root_path %>
+  </div>
+
+</div>
+</div>

@@ -1,0 +1,22 @@
+<h1>Portfolios</h1>
+
+<% @portfolios.each do |portfolio| %>
+<div class="portfoliolet">
+  <div class="portfolio_image">
+    <%= image_tag(portfolio.image.url(:thumb)) if portfolio.image? %>
+  </div>
+
+  <h2 class="portfolio_title"><%= link_to portfolio.title, portfolio %></h2>
+  <div class="portfolio_created">
+    <%= portfolio.created.strftime("%B %d, %Y") %>
+  </div>
+
+  <div class="portfoliolet_description">
+    <%= portfolio.description %>
+  </div>
+
+</div>
+<% end %>
+<div class="clearfix">
+
+</div>

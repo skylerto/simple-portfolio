@@ -9,7 +9,7 @@
 <% end %>
 
   <p>
-    <%= f.label :image, class: 'col-sm-2 control-label'  %>
+    <%= f.label :image  %>
     <%= f.file_field :image %>
   </p>
 
@@ -17,6 +17,13 @@
     <%= f.label :title %>
     <%= f.text_field :title %>
   </p>
+<p>
+  <%= f.label :portfolio_id %>
+  <%= f.select(:portfolio_id, @portfolios.map {|p|
+    name_and_factor = "#{p.title}"
+    [name_and_factor, p.id]}) %>
+</p>
+
 
   <p>
     <%= f.label :created %>

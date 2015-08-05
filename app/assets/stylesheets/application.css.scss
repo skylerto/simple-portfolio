@@ -464,3 +464,61 @@ input[type="submit"]{
     margin: 0.7em auto;
   }
 }
+
+/*
+*   PORTFOLIO
+*/
+
+.portfolio {
+  padding: 1em 3em;
+  margin: 0 auto;
+  .portfolio_image {
+    max-width: 300px;
+    min-width: 100px;
+    margin: 0 auto;
+    img {
+      border-radius: 0.35em;
+    }
+  }
+  .portfolio_title {
+    text-align: center;
+  }
+  .portfolio_created {
+    text-align: center;
+    color: #9eafba;
+    margin: 0.5em 0 2em 0;
+  }
+  .portfolio_description {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.1em;
+    line-height: 1.75;
+  }
+}
+
+.portfoliolet {
+  width: 25%;
+  padding: 1em 2em;
+  float: left;
+  .portfolio_image {
+    margin: 0 auto;
+    width: 100px;
+    img {
+      border-radius: 0.35em;
+
+      margin: 0 auto;
+    }
+  }
+  .portfolio_title {
+    text-align: center;
+    margin: 0;
+  }
+  .portfolio_created {
+    text-align: center;
+    color: #9eafba;
+  }
+  .portfoliolet_description {
+    text-align: center;
+    margin: 0.7em auto;
+  }
+}

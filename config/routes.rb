@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :pieces
+  resources :portfolios
 
-  root "pieces#index"
+  root "portfolios#index"
 end
