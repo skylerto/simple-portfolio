@@ -15,6 +15,12 @@
     <%= portfolio.description %>
   </div>
 
+
+    <div class="buttons">
+      <span class="button"><%= link_to 'Edit', edit_portfolio_path(portfolio) %></span>
+      <span class="button"><%= link_to 'Delete', portfolio_path(portfolio), method: :delete, data: { confirm: 'Are you sure?'} %></span>
+    </div>
+
 </div>
 <% end %>
 <div class="clearfix">

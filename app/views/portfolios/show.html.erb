@@ -16,6 +16,11 @@
     <%= @portfolio.description %>
   </div>
 
+  <div class="buttons">
+    <span class="button"><%= link_to 'Edit', edit_portfolio_path(@portfolio) %></span>
+    <span class="button"><%= link_to 'Delete', portfolio_path(@portfolio), method: :delete, data: { confirm: 'Are you sure?'} %></span>
+  </div>
+
   <% @pieces.each do |piece| %>
   <div class="piecelet">
     <div class="piece_image">
@@ -29,6 +34,11 @@
 
     <div class="piecelet_description">
       <%= piece.description %>
+    </div>
+
+    <div class="buttons">
+      <span class="button"><%= link_to 'Edit', edit_piece_path(piece) %></span>
+      <span class="button"><%= link_to 'Delete', piece_path(piece), method: :delete, data: { confirm: 'Are you sure?'} %></span>
     </div>
 
   </div>

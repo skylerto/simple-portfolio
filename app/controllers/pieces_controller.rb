@@ -23,6 +23,11 @@ class PiecesController < ApplicationController
     end
   end
 
+  def destroy
+    @piece.destroy
+    redirect_to root_path
+  end
+
   private
     def piece_params
       params.require(:piece).permit(:title, :created, :description, :image, :portfolio_id)
