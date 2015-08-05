@@ -1,0 +1,20 @@
+<% @pieces.each do |piece| %>
+<div class="piecelet">
+  <div class="piece_image">
+    <%= image_tag(piece.image.url(:thumb)) if piece.image? %>
+  </div>
+
+  <h2 class="piece_title"><%= piece.title %></h2>
+  <div class="piece_created">
+    <%= piece.created.strftime("%B %d, %Y") %>
+  </div>
+
+  <div class="piecelet_description">
+    <%= piece.description %>
+  </div>
+
+</div>
+<% end %>
+<div class="clearfix">
+
+</div>

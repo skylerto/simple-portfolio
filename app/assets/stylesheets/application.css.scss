@@ -1,0 +1,466 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import 'normalize';
+
+/*
+*   TABLE OF CONTENTS
+*
+*   1.0 VARIABLES
+*   2.0 GENERAL
+*/
+
+/*
+*   1.0 VARIABLES
+*/
+// FONT
+$content-font: 'Georgia', serif;
+$title-font: 'Open sans', sans-serif;
+$nav-link-color: white;
+
+// Colors
+$red: #ef5451;
+$blue: #43b3e6;
+$green: #66bc6a;
+$yellow: #ffee58;
+
+$navigation-color:#343d4b;
+
+
+/*
+*   2.0 GENERAL
+*/
+html, body {
+  font-family: $content-font;
+  background-color:  #f5f7f9 ;
+}
+
+body {
+
+}
+
+p {
+  font-weight: 300;
+  font-family: $content-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  font-family: $title-font;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*
+*  NAVIGATION
+*/
+
+#navbar {
+  width: 100%;
+  height: 75px;
+  margin-top: -1em;
+  font-family: $title-font;
+  background: $navigation-color;
+    #logo {
+      width: 40px;
+      position: absolute;
+      top: 0.7em;
+      left: 2em;
+      img {
+          width: 40px;
+      }
+    }
+    #navigation {
+      margin-top: 3em;
+      float: right;
+      .nav_item{
+        float: left;
+        margin: 0 1em;
+        a {
+          color: $nav-link-color;
+          text-decoration: none;
+          transition: all 0.4s ease;
+          &:hover {
+            color: #33acb7;
+          }
+        }
+      }
+    }
+  }
+
+  #footer {
+    width: 100%;
+    height: 100px;
+    background: $navigation-color;
+    #copyright {
+      width: 16%;
+      color: $nav-link-color;
+      font-size: 1em;
+      padding-top: 20px;
+      margin: 0 auto;
+    }
+    .social {
+      width: 12%;
+      padding-top: 10px;
+      margin: 0 auto;
+      font-size: 0.8em;
+      color: #9eafba;
+      .social_media {
+        margin: 0.5em;
+        width: 20px;
+      }
+    }
+  }
+
+.button {
+  outline: none;
+  background: transparent;
+  border: 1px solid #d6dce0;
+  padding: 0.5em 1.5em;
+  border-radius: 1.5em;
+  &:hover {
+    border: 1px solid #33acb7;
+    color: #33acb7;
+    a {
+      color: #33acb7 !important;
+    }
+  }
+}
+
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/*
+*
+*/
+#main_content {
+  width: 75%;
+  margin: 0 auto;
+  background-color: white;
+  &.hover{
+    color: #33acb7;
+    a {
+      color: $green;
+      text-decoration: none;
+    }
+  }
+  #header {
+    padding: 1em 3em;
+    border-bottom: 1px solid #d6dce0;
+
+    background: #ef5441;
+    color: white;
+    p {
+      display: inline;
+    }
+    .buttons {
+      float: right;
+      .button {
+        font-size: 0.8em;
+        margin-left: 0.5em;
+      }
+    }
+  }
+
+  .alert, #error_explanation {
+    font-size: 1em;
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+    -ms-animation: fadein 1s; /* Internet Explorer */
+    -o-animation: fadein 1s; /* Opera < 12.1 */
+    animation: fadein 1s;
+  }
+  .message{
+    margin: 0.5em;
+  .alert {
+    width: 90%;
+    padding: 1em;
+    margin: 0 auto;
+    border: 1px solid red;//#d6dce0;
+    border-radius: 1.5em;
+    text-align:center;
+  }
+}
+  #error_explanation{
+    padding: 0 3em 0 3em;
+  }
+  .post_wrapper {
+    padding: 3em;
+    border-bottom: 1px solid #d6dce0;
+    .title {
+      margin: 0;
+      a {
+        font-weight: 500;
+        text-decoration: none;
+        color: #2a2f35;
+        font-size: 1.5em;
+        &:hover {
+          color: #33acb7;
+        }
+      }
+    }
+    .date_and_author {
+      color: #9eafba;
+      margin: 0.5em 0 0 0;
+    }
+    .excerpt {
+      margin: 0.5em 0 0 0;
+    }
+  }
+  #post_content {
+    padding: 1em 3em;
+    .title {
+      font-weight: 500;
+      text-decoration: none;
+      color: #2a2f35;
+      font-size: 2.5em;
+      margin-bottom: 0;
+    }
+    .body {
+      font-size: 1.1em;
+      line-height: 1.75;
+    }
+    .date_and_author {
+      color: #9eafba;
+      margin: 0.5em 0 2em 0;
+    }
+
+
+    #comments {
+      h2 {
+        margin: 3em 0 1em 0;
+        border-bottom: 1px solid #d6dce0;
+        padding-bottom: 0.5em;
+      }
+      h3 {
+        margin-top: 2em;
+      }
+      .comment {
+        border-bottom: 1px solid #d6dce0;
+        padding: 1.5em 2em;
+      }
+
+      .comment_content {
+        float: left;
+        width: 100%;
+        .comment_header{
+          width: 100px;
+          float: left;
+        }
+
+        .comment_contents{
+          width: 50%;
+          float: left;
+          margin-left: 1em;
+        }
+        .comment_name {
+          margin: 1em 0 0 0;
+          font-size: 0.7em;
+          text-transform: uppercase;
+        }
+        .comment_body {
+          font-size: 1.2em;
+          margin: 0.2em 0 0 0;
+        }
+        .comment_time {
+          margin-top: 1.2em;
+          font-size: 0.8em;
+        }
+      }
+      .button {
+        float: right;
+      }
+    }
+    input[type="text"], textarea {
+      width: 50%;
+    }
+  }
+}
+
+/*
+*
+*/
+#page_wrapper {
+  padding: 3em;
+  #profile_image {
+    width: 300px;
+    float: left;
+    margin-right: 2em;
+    img {
+      width: 100%;
+      border-radius: 0.35em;
+    }
+  }
+  #content {
+    h1 {
+      font-weight: 500;
+    }
+    p{
+      font-size: 1.1em;
+      line-height: 1.75;
+    }
+    a {
+      color: #33acb7;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+}
+
+.links {
+  margin: 2em 0;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea, input[type="date"] {
+  width: 90%;
+  border: 1px solid #d6dce0;
+  border-radius: 0.35em;
+  margin-top: 10px;
+  padding: 0.5em 1em;
+  line-height: 1.75;
+}
+
+input[type="file"]{
+  width: 90%;
+  margin-top: 10px;
+  padding: 0.5em 1em;
+  line-height: 1.75;
+}
+
+input[type="text"], input[type="date"] {
+  height: 35px;
+}
+
+textarea {
+  min-height: 180px;
+}
+
+input[type="submit"]{
+  outline: none;
+  background: transparent;
+  border: 1px solid #d6dce0;
+  padding: 0.5em 1.5em;
+  font-size: 1.1em;
+  border-radius: 1.5em;
+  margin-left: 0.5em;
+  &:hover {
+    border: 1px solid #33acb7;
+    color: #33acb7;
+  }
+}
+
+/* LEGACY CODE */
+
+
+.nav_link{
+  outline: none;
+  background: transparent;
+  padding: 0 1em;
+  &:hover {
+    color: #607d8b;
+    a {
+      color: #607d8b !important;
+    }
+  }
+}
+
+
+/*
+*   MAIN PAGE
+*/
+#description {
+  .title {
+    text-align: center;
+  }
+  .blog,
+  .shop,
+  .portfolio {
+    width: 28%;
+    float: left;
+    margin: 2em 1em;
+
+    p {
+      text-align: justify;
+    }
+  }
+}
+
+
+/*
+*   PIECES
+*/
+
+.piece {
+  padding: 1em 3em;
+  margin: 0 auto;
+  .piece_image {
+    max-width: 300px;
+    min-width: 100px;
+    margin: 0 auto;
+    img {
+      border-radius: 0.35em;
+    }
+  }
+  .piece_title {
+    text-align: center;
+  }
+  .piece_created {
+    text-align: center;
+    color: #9eafba;
+    margin: 0.5em 0 2em 0;
+  }
+  .piece_description {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.1em;
+    line-height: 1.75;
+  }
+}
+
+.piecelet {
+  width: 25%;
+  padding: 1em 2em;
+  float: left;
+  .piece_image {
+    margin: 0 auto;
+    width: 100px;
+    img {
+      border-radius: 0.35em;
+
+      margin: 0 auto;
+    }
+  }
+  .piece_title {
+    text-align: center;
+    margin: 0;
+  }
+  .piece_created {
+    text-align: center;
+    color: #9eafba;
+  }
+  .piecelet_description {
+    text-align: center;
+    margin: 0.7em auto;
+  }
+}
