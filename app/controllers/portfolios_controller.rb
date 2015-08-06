@@ -3,7 +3,7 @@ class PortfoliosController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
 
   def index
-    @portfolios = Portfolio.all
+    @portfolios = Portfolio.where(:user_id => current_user.id)
   end
 
   def show

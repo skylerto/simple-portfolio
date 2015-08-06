@@ -3,7 +3,7 @@ class PiecesController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
 
   def index
-    @pieces = Piece.all
+    @pieces = Piece.where(:user_id => current_user.id)
   end
 
   def show
