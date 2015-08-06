@@ -17,10 +17,12 @@
   </div>
 
 
-      <div class="buttons">
-        <span class="button"><%= link_to 'Edit', edit_piece_path(@piece) %></span>
-        <span class="button"><%= link_to 'Delete', piece_path(@piece), method: :delete, data: { confirm: 'Are you sure?'} %></span>
-      </div>
+  <% if user_signed_in? %>
+    <div class="buttons">
+      <span class="button"><%= link_to 'Edit', edit_piece_path(@piece) %></span>
+      <span class="button"><%= link_to 'Delete', piece_path(@piece), method: :delete, data: { confirm: 'Are you sure?'} %></span>
+    </div>
+  <% end %>
 
   <div class="button">
   <%= link_to "back", root_path %>

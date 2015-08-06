@@ -24,7 +24,11 @@
       <div class="nav_item"><%= link_to "Blog", root_path %></div>
       <div class="nav_item"><%= link_to "Portfolio", root_path %></div>
       <div class="nav_item"><%= link_to "Shop", root_path %></div>
-
+      <% if user_signed_in? %>
+        <div class="nav_item"><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %> </div>
+      <% else %>
+        <div class="nav_item"><%= link_to('Sign in', new_user_session_path)  %></div>
+      <% end %>
     </div>
 
   </div>

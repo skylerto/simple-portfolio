@@ -1,5 +1,6 @@
 class PiecesController < ApplicationController
   before_action :find_piece, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [:index, :show]
 
   def index
     @pieces = Piece.all
