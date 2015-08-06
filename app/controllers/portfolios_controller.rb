@@ -15,7 +15,7 @@ class PortfoliosController < ApplicationController
 
   def create
     @portfolio = Portfolio.new(portfolio_params)
-
+    @portfolio.user_id = current_user.id
     if @portfolio.save
       redirect_to @portfolio, notice: "create successfully!"
     else

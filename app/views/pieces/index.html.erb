@@ -1,28 +1,8 @@
-<% @pieces.each do |piece| %>
-<div class="piecelet">
-  <div class="piece_image">
-    <%= image_tag(piece.image.url(:thumb)) if piece.image? %>
-  </div>
+<h1>Pieces</h1>
+<%= render "partials/buttons", :new_button => true, :item => "piece" %>
 
-  <h2 class="piece_title"><%= piece.title %></h2>
-  <div class="piece_created">
-    <%= piece.created.strftime("%B %d, %Y") %>
-  </div>
+<%= render 'pieces' %>
 
-  <div class="piecelet_description">
-    <%= piece.description %>
-  </div>
-
-
-  <% if user_signed_in? %>
-    <div class="buttons">
-      <div class="button"><%= link_to 'Edit', edit_piece_path(piece) %></div>
-      <div class="button"><%= link_to 'Delete', piece_path(piece), method: :delete, data: { confirm: 'Are you sure?'} %></div>
-    </div>
-    <% end %>
-
-</div>
-<% end %>
 <div class="clearfix">
 
 </div>

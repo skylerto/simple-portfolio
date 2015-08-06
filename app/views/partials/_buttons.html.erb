@@ -1,0 +1,16 @@
+<% if defined?(edit_delete) && edit_delete == true %>
+  <% if user_signed_in? && current_user.id == item.user_id %>
+    <div class="buttons">
+      <div class="button"><%= link_to 'Edit', "/#{item}s/new/#{item.id}" %></div>
+      <div class="button"><%= link_to 'Delete', portfolio_path(item), method: :delete, data: { confirm: 'Are you sure?'} %></div>
+    </div>
+  <% end %>
+<% end %>
+
+<% if defined?(new_button) && new_button == true %>
+  <% if user_signed_in? %>
+    <div class="buttons">
+      <div class="button"><%= link_to "New #{item.capitalize}", "/#{item}s/new" %></div>
+    </div>
+  <% end %>
+<% end %>

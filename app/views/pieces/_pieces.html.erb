@@ -1,0 +1,25 @@
+<% @pieces.each do |piece| %>
+  <% if piece.user_id == current_user.id %>
+    <%= link_to(piece) do %>
+    <div class="piecelet">
+      <div class="piece_image">
+        <%= image_tag(piece.image.url(:thumb)) if piece.image? %>
+      </div>
+
+      <h2 class="piece_title"><%= piece.title %></h2>
+      <p class="piece_created"><%= User.find(piece.user_id).email if piece.user_id? %></p>
+      <div class="piece_created">
+        <%= piece.created.strftime("%B %d, %Y") if piece.created? %>
+      </div>
+
+      <div class="piecelet_description">
+        <%= piece.description %>
+      </div>
+
+
+      <%= render "partials/buttons", :edit_delete => true, :item => piece %>
+
+    </div>
+    <% end %>
+  <% end %>
+<% end %>
