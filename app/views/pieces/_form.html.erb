@@ -9,12 +9,20 @@
 <% end %>
 
   <p>
-    <%= f.label :image  %>
+    <% if !@piece.image.url.nil? %>
+      <p>Current Image Thumbnail</p>
+      <%= image_tag(@piece.image.url(:thumb)) %>
+    <% end %>
+  </p>
+
+  <p>
+    <%= f.label :image, 'New Image'  %>
     <%= f.file_field :image %>
   </p>
 
   <p>
     <%= f.label :title %>
+    <br/>
     <%= f.text_field :title %>
   </p>
 <p>

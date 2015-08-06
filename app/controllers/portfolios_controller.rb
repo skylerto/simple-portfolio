@@ -23,6 +23,17 @@ class PortfoliosController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @portfolio.update(portfolio_params)
+      redirect_to @portfolio, notice: "saved successfully!"
+    else
+      render 'new'
+    end
+  end
+
   def destroy
     @portfolio.destroy
     redirect_to root_path

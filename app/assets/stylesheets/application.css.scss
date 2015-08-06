@@ -47,7 +47,6 @@ $navigation-color:#343d4b;
 */
 html, body {
   font-family: $content-font;
-  background-color:  #f5f7f9 ;
 }
 
 body {
@@ -166,25 +165,25 @@ a {
 
   .buttons {
     width: 70%;
-    margin: 0 auto;
+    margin: 2em auto;
   }
 
-.button {
-  outline: none;
-  background: transparent;
-  border: 1px solid #d6dce0;
-  padding: 0.5em 1.5em;
-  border-radius: 1.5em;
-
-    text-align: center;
-  &:hover {
-    border: 1px solid #33acb7;
-    color: #33acb7;
-    a {
-      color: #33acb7 !important;
+  .button {
+    outline: none;
+    background: transparent;
+    border: 1px solid #d6dce0;
+    padding: 0.5em 1.5em;
+    border-radius: 1.5em;
+    margin: 0.5em;
+      text-align: center;
+    &:hover {
+      border: 1px solid #33acb7;
+      color: #33acb7;
+      a {
+        color: #33acb7 !important;
+      }
     }
   }
-}
 
 .clearfix:after {
   content: ".";
@@ -463,8 +462,14 @@ input[type="submit"]{
 }
 
 .piecelet {
-  width: 25%;
+
+  border: 1px solid #d6dce0;
+  border-radius: 0.35em;
+  box-shadow: 1px 1px 1px #a2a2a2;
+
+  width: 20%;
   padding: 1em 2em;
+  margin: 1em 0.6em ;
   float: left;
   .piece_image {
     margin: 0 auto;
@@ -514,15 +519,20 @@ input[type="submit"]{
   }
   .portfolio_description {
     text-align: center;
-    margin: 0 auto;
+    margin: 2em;
     font-size: 1.1em;
     line-height: 1.75;
   }
 }
 
 .portfoliolet {
-  width: 25%;
+  border: 1px solid #d6dce0;
+  border-radius: 0.35em;
+  box-shadow: 1px 1px 1px #a2a2a2;
+  width: 20%;
+
   padding: 1em 2em;
+  margin: 1em 0.6em;
   float: left;
   .portfolio_image {
     margin: 0 auto;

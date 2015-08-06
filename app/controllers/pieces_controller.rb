@@ -24,6 +24,16 @@ class PiecesController < ApplicationController
     end
   end
 
+  def edit
+  end
+  def update
+    if @piece.update(piece_params)
+      redirect_to@piece, notice: "saved successfully!"
+    else
+      render 'new'
+    end
+  end
+
   def destroy
     @piece.destroy
     redirect_to root_path
@@ -36,5 +46,6 @@ class PiecesController < ApplicationController
 
     def find_piece
       @piece = Piece.find(params[:id])
+      @portfolios = Portfolio.order("title ASC")
     end
 end
