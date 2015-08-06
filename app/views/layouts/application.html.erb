@@ -34,6 +34,17 @@
   </div>
 
 
+  <% if user_signed_in? %>
+  <div id="loggedin_nav">
+      <span class="user_name"><%= current_user.name.nil? ? current_user.email.split('@')[0].capitalize : current_user.name %>'s Dashboard</span>
+      <div class="navigation">
+        <div class="nav_item"><%= link_to "My Portfolios", portfolios_path %> </div>
+        <div class="nav_item"><%= link_to 'Settings', root_path %></div>
+      </div>
+  </div>
+  <% end %>
+
+
 
 <div id="main_content">
   <% flash.each do |name, msg| %>
