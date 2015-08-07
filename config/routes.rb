@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   resources :users
 
-  root "pages#portfolios"
+  root "users#index"
 end

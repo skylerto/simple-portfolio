@@ -3,7 +3,7 @@
     <div class="piecelet">
         <%= image_tag(user.avatar.url(:medium), :class => "profile", :style => "border-radius: 0.35em;") if user.avatar? %>
 
-        <p class="artist_name">by <%= User.find(piece.user_id).name? ? User.find(piece.user_id).name : User.find(piece.user_id).email %></p>
+        <p class="artist_name">by <%= user.name? ? user.name : user.email %></p>
 
 
         <div class="piecelet_description">
