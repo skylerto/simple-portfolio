@@ -243,50 +243,51 @@ a {
   #error_explanation{
     padding: 0 3em 0 3em;
   }
-  .post_wrapper {
-    padding: 3em;
-    border-bottom: 1px solid #d6dce0;
-    .title {
-      margin: 0;
-      a {
-        font-weight: 500;
-        text-decoration: none;
-        color: #2a2f35;
-        font-size: 1.5em;
-        &:hover {
-          color: #33acb7;
-        }
-      }
-    }
-    .date_and_author {
-      color: #9eafba;
-      margin: 0.5em 0 0 0;
-    }
-    .excerpt {
-      margin: 0.5em 0 0 0;
-    }
-  }
-  #post_content {
-    padding: 1em 3em;
-    .title {
-      font-weight: 500;
-      text-decoration: none;
-      color: #2a2f35;
-      font-size: 2.5em;
-      margin-bottom: 0;
-    }
-    .body {
-      font-size: 1.1em;
-      line-height: 1.75;
-    }
-    .date_and_author {
-      color: #9eafba;
-      margin: 0.5em 0 2em 0;
-    }
-    input[type="text"], textarea {
-      width: 50%;
-    }
-  }
+  // .post_wrapper {
+  //   padding: 3em;
+  //   border-bottom: 1px solid #d6dce0;
+  //   .title {
+  //     margin: 0;
+  //     a {
+  //       font-weight: 500;
+  //       text-decoration: none;
+  //       color: #2a2f35;
+  //       font-size: 1.5em;
+  //       &:hover {
+  //         color: #33acb7;
+  //       }
+  //     }
+  //   }
+  //   .date_and_author {
+  //     color: #9eafba;
+  //     margin: 0.5em 0 0 0;
+  //   }
+  //   .excerpt {
+  //     margin: 0.5em 0 0 0;
+  //   }
+  // }
+
+  // #post_content {
+  //   padding: 1em 3em;
+  //   .title {
+  //     font-weight: 500;
+  //     text-decoration: none;
+  //     color: #2a2f35;
+  //     font-size: 2.5em;
+  //     margin-bottom: 0;
+  //   }
+  //   .body {
+  //     font-size: 1.1em;
+  //     line-height: 1.75;
+  //   }
+  //   .date_and_author {
+  //     color: #9eafba;
+  //     margin: 0.5em 0 2em 0;
+  //   }
+  //   input[type="text"], textarea {
+  //     width: 50%;
+  //   }
+  // }
 }
 
 /*
@@ -463,6 +464,15 @@ margin: 0;
       font-family: $title-font;
       font-size: 0.8em;
     }
+    .artist {
+      padding-top: 130px;
+      margin: 0;
+      font-family: $title-font;
+      font-size: 2em;
+      position: relative;
+      text-align: center;
+      color: white;
+    }
     .piece_created {
       font-family: $title-font;
       position: relative;
@@ -470,6 +480,10 @@ margin: 0;
       font-size: 0.8em;
     }
   }
+}
+
+.piecelet :hover {
+    //transition: all 0.4s ease;
 }
 
 /*
