@@ -60,6 +60,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  text-align: center;
   font-weight: 500;
   font-family: $title-font;
 }
@@ -199,7 +200,7 @@ a {
 *
 */
 #main_content {
-  width: 75%;
+  width: 85%;
   margin: 0 auto;
   background-color: white;
   &.hover{
@@ -282,50 +283,6 @@ a {
       color: #9eafba;
       margin: 0.5em 0 2em 0;
     }
-
-
-    #comments {
-      h2 {
-        margin: 3em 0 1em 0;
-        border-bottom: 1px solid #d6dce0;
-        padding-bottom: 0.5em;
-      }
-      h3 {
-        margin-top: 2em;
-      }
-      .comment {
-        border-bottom: 1px solid #d6dce0;
-        padding: 1.5em 2em;
-      }
-
-      .comment_content {
-        float: left;
-        width: 100%;
-        .comment_header{
-          width: 100px;
-          float: left;
-        }
-
-        .comment_contents{
-          width: 50%;
-          float: left;
-          margin-left: 1em;
-        }
-        .comment_name {
-          margin: 1em 0 0 0;
-          font-size: 0.7em;
-          text-transform: uppercase;
-        }
-        .comment_body {
-          font-size: 1.2em;
-          margin: 0.2em 0 0 0;
-        }
-        .comment_time {
-          margin-top: 1.2em;
-          font-size: 0.8em;
-        }
-      }
-    }
     input[type="text"], textarea {
       width: 50%;
     }
@@ -343,7 +300,6 @@ a {
     margin-right: 2em;
     img {
       width: 100%;
-      border-radius: 0.35em;
     }
   }
   #content {
@@ -445,11 +401,11 @@ input[type="submit"]{
     min-width: 100px;
     margin: 0 auto;
     img {
-      border-radius: 0.35em;
     }
   }
   .piece_title {
     text-align: center;
+    margin-bottom: 0;
   }
   .piece_created {
     text-align: center;
@@ -459,6 +415,7 @@ input[type="submit"]{
   .piece_description {
     text-align: center;
     margin: 0 auto;
+    margin-bottom: 5em;
     font-size: 1.1em;
     line-height: 1.75;
   }
@@ -473,34 +430,25 @@ margin: 0;
 
 .piecelet {
 
-  border: 1px solid #d6dce0;
-  border-radius: 0.35em;
-  box-shadow: 1px 1px 1px #a2a2a2;
   color: $font-color;
   width: 300px;
   height:300px;
-  margin: 1em 0.6em ;
+  margin: 1em 0.8em ;
   float: left;
   .piece_image {
     position: absolute;
-    margin: 0 auto;
     width: 300px;
     height:300px;
     img {
-      border-radius: 0.35em;
 
-      margin: 0 auto;
     }
   }
   .piece_header {
     position: relative;
-      background: rgba(0, 0, 0, 0.3);
-      width: 300px;
-      height: 300px;
-
-
-        color: white;
-
+    background: rgba(0, 0, 0, 0.3);
+    width: 300px;
+    height: 300px;
+    color: white;
     .piece_title {
       padding-top: 90px;
       margin: 0;
@@ -510,10 +458,10 @@ margin: 0;
     }
     .artist_name {
       margin: 0;
-        text-align: center;
-        font-weight: 300;
-        font-family: $title-font;
-        font-size: 0.8em;
+      text-align: center;
+      font-weight: 300;
+      font-family: $title-font;
+      font-size: 0.8em;
     }
     .piece_created {
       font-family: $title-font;
@@ -521,21 +469,6 @@ margin: 0;
       text-align: center;
       font-size: 0.8em;
     }
-
-    .buttons {
-    }
-  }
-    .piecelet_description {
-background: rgba(0, 0, 0, 0.5);
-color: white;
-margin: 0 auto;
-width: 250px;
-font-family: $title-font;
-        position: relative;
-      text-align: center;
-      padding: 0.7em;
-
-
   }
 }
 
@@ -552,7 +485,7 @@ font-family: $title-font;
     min-width: 100px;
     margin: 0 auto;
     img {
-      border-radius: 0.35em;
+
     }
   }
   .portfolio_title {
@@ -572,9 +505,6 @@ font-family: $title-font;
 }
 
 .portfoliolet {
-  border: 1px solid #d6dce0;
-  border-radius: 0.35em;
-  box-shadow: 1px 1px 1px #a2a2a2;
   width: 20%;
   color: $font-color;
   padding: 1em 2em;
