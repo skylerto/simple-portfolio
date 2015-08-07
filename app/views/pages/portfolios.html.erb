@@ -1,28 +1,6 @@
 <h1>Portfolios</h1>
 
-<% @portfolios.each do |portfolio| %>
-    <%= link_to(portfolio) do %>
-    <div class="portfoliolet">
-      <div class="portfolio_image">
-        <%= image_tag(portfolio.image.url(:thumb)) if portfolio.image? %>
-      </div>
-
-      <h2 class="portfolio_title"><%= portfolio.title %></h2>
-      <p class="piece_created"><%= User.find(portfolio.user_id).email if portfolio.user_id? %></p>
-      <div class="portfolio_created">
-        <%= portfolio.created.strftime("%B %d, %Y") %>
-      </div>
-
-      <div class="portfoliolet_description">
-        <%= portfolio.description[0..200] + "..." %>
-      </div>
-
-    <%= render "partials/buttons", :edit_delete => true, :item => portfolio %>
-
-    </div>
-  <% end %>
-<% end %>
-
+<%= render "portfolios/portfolios" %>
 <div class="clearfix">
 
 </div>

@@ -30,6 +30,7 @@
 */
 // FONT
 $content-font: 'Georgia', serif;
+$font-color: #2a2a2a;
 $title-font: 'Open sans', sans-serif;
 $nav-link-color: white;
 
@@ -437,6 +438,7 @@ input[type="submit"]{
 .piece {
   padding: 1em 3em;
   margin: 0 auto;
+  color: $font-color;
   .piece_image {
     max-width: 300px;
     min-width: 100px;
@@ -461,12 +463,21 @@ input[type="submit"]{
   }
 }
 
+.artist_name {
+
+    text-align: center;
+    font-weight: 800;
+    color: #2a2a2a;
+    margin: 0.5em 0 2em 0;
+    font-family: $title-font;
+}
+
 .piecelet {
 
   border: 1px solid #d6dce0;
   border-radius: 0.35em;
   box-shadow: 1px 1px 1px #a2a2a2;
-
+  color: $font-color;
   width: 20%;
   padding: 1em 2em;
   margin: 1em 0.6em ;
@@ -501,6 +512,7 @@ input[type="submit"]{
 .portfolio {
   padding: 1em 3em;
   margin: 0 auto;
+  color: $font-color;
   .portfolio_image {
     max-width: 300px;
     min-width: 100px;
@@ -530,7 +542,7 @@ input[type="submit"]{
   border-radius: 0.35em;
   box-shadow: 1px 1px 1px #a2a2a2;
   width: 20%;
-
+  color: $font-color;
   padding: 1em 2em;
   margin: 1em 0.6em;
   float: left;

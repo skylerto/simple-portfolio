@@ -6,7 +6,7 @@
       </div>
 
       <h2 class="piece_title"><%= piece.title %></h2>
-      <p class="piece_created"><%= User.find(piece.user_id).email if piece.user_id? %></p>
+      <p class="artist_name">by <%= User.find(piece.user_id).name? ? User.find(piece.user_id).name : User.find(piece.user_id).email %></p>
       <div class="piece_created">
         <%= piece.created.strftime("%B %d, %Y") if piece.created? %>
       </div>

@@ -2,8 +2,9 @@
   <div class="piece_image">
     <%= image_tag(@piece.image.url(:medium)) %>
   </div>
-  <p class="piece_created"><%= User.find(@piece.user_id).email if @piece.user_id? %></p>
+
   <h1 class="piece_title"><%= @piece.title %></h1>
+  <p class="artist_name">by <%= User.find(@piece.user_id).name? ? User.find(@piece.user_id).name : User.find(@piece.user_id).email %></p>
   <div class="piece_created">
     <%= @piece.created.strftime("%B %d, %Y") if @piece.created? %>
   </div>

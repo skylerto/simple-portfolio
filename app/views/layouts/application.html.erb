@@ -40,7 +40,7 @@
       <div class="navigation">
         <div class="nav_item"><%= link_to "My Portfolios", portfolios_path %> </div>
         <div class="nav_item"><%= link_to "My Pieces", pieces_path %> </div>
-        <div class="nav_item"><%= link_to 'Settings', root_path %></div>
+        <div class="nav_item"><%= link_to 'Settings', user_path(current_user) %></div>
       </div>
   </div>
   <% end %>

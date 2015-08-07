@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   resources :pieces
   resources :portfolios
 
+  resources :users
+
   root "pages#portfolios"
 end

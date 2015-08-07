@@ -1,0 +1,40 @@
+
+
+  <div id="page_wrapper">
+    <!-- PROFILE PICTURE
+     <div id="profile_image">
+      <%= image_tag "profile.jpg" %>
+    </div> -->
+      <div id="profile_image">
+        <%= image_tag(current_user.avatar.url(:medium), :class => "profile") %>
+      </div>
+      <% if @user.name? %>
+        <p>Name: <%= @user.name %></p>
+      <% end %>
+      <p>Username: <%= @user.email %></p>
+      <% if @user.about? %>
+        <p>
+          <%= @user.about %>
+        </p>
+      <% end %>
+      <div class="buttons">
+        <span class="button"><%= link_to "Edit", edit_user_path(current_user) %> </span>
+      </div>
+      <div class="clearfix"></div>
+
+
+
+
+      <div class="">
+
+        <h1>Portfolios</h1>
+
+        <%= render 'portfolios/portfolios' %>
+      </div>
+
+
+
+      <div class="clearfix"></div>
+
+
+  </div>

@@ -6,7 +6,7 @@
       </div>
 
       <h2 class="portfolio_title"><%= portfolio.title %></h2>
-      <p class="piece_created"><%= User.find(portfolio.user_id).email if portfolio.user_id? %></p>
+      <p class="artist_name">by <%= User.find(portfolio.user_id).name? ? User.find(portfolio.user_id).name : User.find(portfolio.user_id).email %></p>
       <div class="portfolio_created">
         <%= portfolio.created.strftime("%B %d, %Y") %>
       </div>

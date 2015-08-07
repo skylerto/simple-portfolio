@@ -1,0 +1,17 @@
+<% @users.each do |user| %>
+  <%= link_to(user) do %>
+    <div class="piecelet">
+        <%= image_tag(user.avatar.url(:medium), :class => "profile", :style => "border-radius: 0.35em;") if user.avatar? %>
+
+        <p class="artist_name">by <%= User.find(piece.user_id).name? ? User.find(piece.user_id).name : User.find(piece.user_id).email %></p>
+
+
+        <div class="piecelet_description">
+          <p><%= user.about[0..200] + "..." if user.about? %></p>
+        </div>
+
+        <div class="clearfix"></div>
+
+    </div>
+  <% end %>
+<% end %>
