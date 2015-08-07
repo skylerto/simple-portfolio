@@ -13,12 +13,7 @@
   </div>
 
 
-  <% if user_signed_in? %>
-    <div class="buttons">
-      <div class="button"><%= link_to 'Edit', edit_piece_path(@piece) %></div>
-      <div class="button"><%= link_to 'Delete', piece_path(@piece), method: :delete, data: { confirm: 'Are you sure?'} %></div>
-    </div>
-  <% end %>
+<%= render "partials/buttons", :edit_delete => true, :item => @piece %>
 
   <div class="button">
   <%= link_to "back", root_path %>
