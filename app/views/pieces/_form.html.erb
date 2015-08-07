@@ -10,8 +10,8 @@
 
   <p>
     <% if !@piece.image.url.nil? %>
-      <p>Current Image Thumbnail</p>
-      <%= image_tag(@piece.image.url(:thumb)) %>
+      <p>Current Image</p>
+      <%= image_tag(@piece.image.url(:full)) %>
     <% end %>
   </p>
 

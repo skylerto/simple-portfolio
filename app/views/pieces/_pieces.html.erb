@@ -2,22 +2,23 @@
     <%= link_to(piece) do %>
     <div class="piecelet">
       <div class="piece_image">
-        <%= image_tag(piece.image.url(:thumb)) if piece.image? %>
+        <%= image_tag(piece.image.url(:full)) if piece.image? %>
       </div>
 
-      <h2 class="piece_title"><%= piece.title %></h2>
-      <p class="artist_name">by <%= User.find(piece.user_id).name? ? User.find(piece.user_id).name : User.find(piece.user_id).email %></p>
-      <div class="piece_created">
-        <%= piece.created.strftime("%B %d, %Y") if piece.created? %>
+      <div class="piece_header">
+        <h2 class="piece_title"><%= piece.title %></h2>
+        <p class="artist_name">by <%= User.find(piece.user_id).name? ? User.find(piece.user_id).name : User.find(piece.user_id).email %></p>
+        <div class="piece_created">
+          <%= piece.created.strftime("%B %d, %Y") if piece.created? %>
+        </div>
+        <%= render "partials/buttons", :edit_delete => true, :item => piece %>
       </div>
 
-      <div class="piecelet_description">
-        <%= piece.description %>
-      </div>
 
 
-      <%= render "partials/buttons", :edit_delete => true, :item => piece %>
 
+
+      <div class="clearfix"></div>
     </div>
   <% end %>
 <% end %>

@@ -143,6 +143,7 @@ a {
     #copyright {
       width: 16%;
       color: $nav-link-color;
+      font-family: $title-font;
       font-size: 1em;
       padding-top: 20px;
       margin: 0 auto;
@@ -464,11 +465,9 @@ input[type="submit"]{
 }
 
 .artist_name {
-
+margin: 0;
     text-align: center;
-    font-weight: 800;
-    color: #2a2a2a;
-    margin: 0.5em 0 2em 0;
+    font-weight: 300;
     font-family: $title-font;
 }
 
@@ -478,30 +477,65 @@ input[type="submit"]{
   border-radius: 0.35em;
   box-shadow: 1px 1px 1px #a2a2a2;
   color: $font-color;
-  width: 20%;
-  padding: 1em 2em;
+  width: 300px;
+  height:300px;
   margin: 1em 0.6em ;
   float: left;
   .piece_image {
+    position: absolute;
     margin: 0 auto;
-    width: 100px;
+    width: 300px;
+    height:300px;
     img {
       border-radius: 0.35em;
 
       margin: 0 auto;
     }
   }
-  .piece_title {
-    text-align: center;
-    margin: 0;
+  .piece_header {
+    position: relative;
+      background: rgba(0, 0, 0, 0.3);
+      width: 300px;
+      height: 300px;
+
+
+        color: white;
+
+    .piece_title {
+      padding-top: 90px;
+      margin: 0;
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+    .artist_name {
+      margin: 0;
+        text-align: center;
+        font-weight: 300;
+        font-family: $title-font;
+        font-size: 0.8em;
+    }
+    .piece_created {
+      font-family: $title-font;
+      position: relative;
+      text-align: center;
+      font-size: 0.8em;
+    }
+
+    .buttons {
+    }
   }
-  .piece_created {
-    text-align: center;
-    color: #9eafba;
-  }
-  .piecelet_description {
-    text-align: center;
-    margin: 0.7em auto;
+    .piecelet_description {
+background: rgba(0, 0, 0, 0.5);
+color: white;
+margin: 0 auto;
+width: 250px;
+font-family: $title-font;
+        position: relative;
+      text-align: center;
+      padding: 0.7em;
+
+
   }
 }
 
@@ -569,5 +603,8 @@ input[type="submit"]{
   }
 }
 
+img {
+  width: 100%;
+}
 
 /***/
