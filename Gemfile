@@ -13,13 +13,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'paperclip'
 gem 'devise'
-<<<<<<< 3c2a224569bfc9cf6e646c0a4c306b0603e441ae
 gem 'aws-sdk', '< 2.0'
-=======
-gem 'aws-sdk'
 
 #gem 'unicode_utils'
->>>>>>> s3 and heroku
 
 group :development, :test do
   gem 'byebug'
