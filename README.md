@@ -17,6 +17,9 @@ $ rails s
 
 ## Technical 
 
+Currently deployed on Heroku (send me an email to get the url, if you're
+interested).
+
 ### Dependencies
 
 *Please consult the Gemfile for specifics on versioning, and ruby version.*
