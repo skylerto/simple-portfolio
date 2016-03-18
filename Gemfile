@@ -15,8 +15,6 @@ gem 'paperclip'
 gem 'devise'
 gem 'aws-sdk', '< 2.0'
 
-#gem 'unicode_utils'
-
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
